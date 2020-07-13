@@ -1,9 +1,19 @@
 import React from 'react';
 import s from './TableHead.module.scss'
+import {useDispatch, useSelector} from "react-redux";
+import {sortUsers} from "../../redux/actionCreators";
 
 const TableHead = () => {
+  const dispatch = useDispatch()
+  const { users } = useSelector( state => state.users)
 
-  const handleHeaderClick = (event) => console.log('Event target: ', event.target)
+  const byField = (field) => (a, b) => a[field] > b[field] ? 1 : -1
+
+  const handleHeaderClick = (event) => {
+    const sortedUsers = [...users]
+    sortedUsers.sort( byField(event.target.textContent) )
+    dispatch( sortUsers(sortedUsers) )
+  }
 
   return (
     <thead>
