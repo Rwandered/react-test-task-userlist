@@ -1,0 +1,18 @@
+$body-color: #8f9299;
+$font-color: #000;
+$hover-body-color: #282c34;
+$hover-font-color: #fff;
+
+.table__body {
+  background: $body-color;
+  color: $font-color;
+  text-align: center;
+
+  .userData {
+
+    &:hover {
+      background: $hover-body-color;
+      color: $hover-font-color;
+    }
+  }
+}

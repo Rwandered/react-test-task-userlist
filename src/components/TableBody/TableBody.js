@@ -1,33 +1,32 @@
 import React, {useEffect, useState} from 'react';
 import s from './TableBody.module.scss'
+import {useDispatch, useSelector} from "react-redux";
+import {initUser, showModal} from "../../redux/actionCreators";
 
 
 const TableBody = () => {
+  const dispatch = useDispatch()
+  const users = useSelector( state => state.users.users)
 
-  const [users, setUsers] = useState( [] )
-
-
-
-  useEffect(  () => {
-    ( async function getUserData() {
-      const res = await fetch('https://jsonplaceholder.typicode.com/users')
-      const users = await res.json()
-      console.log('User: ',users)
-      setUsers( users )
-    })()
+  useEffect( () => {
+    dispatch( initUser() )
   }, [])
 
   return (
-    <tbody>
+    <tbody className={ s.table__body }>
       { users.map( (user) => {
+        const { id, name, username, email, website} = user
         return (
-          <tr key={user.id} className={ s.userData }>
-            <td className={ s.userId }> { user.id } </td>
-            <td className={ s.name }> { user.name } </td>
-            <td className={ s.username }> { user.username } </td>
-            <td className={ s.email }> {user.email } </td>
-            <td className={ s.website }> { user.website } </td>
-            <td></td>
+          <tr
+            key={ id }
+            className={ s.userData }
+            onClick={ () => dispatch( showModal(id) ) }
+          >
+            <td className={ s.userId }> { id } </td>
+            <td className={ s.name }> { name } </td>
+            <td className={ s.username }> { username } </td>
+            <td className={ s.email }> { email } </td>
+            <td className={ s.website }> { website } </td>
           </tr>
         )
       })}

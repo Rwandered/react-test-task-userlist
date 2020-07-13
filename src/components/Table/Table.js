@@ -6,10 +6,12 @@ import TableBody from "../TableBody/TableBody";
 const Table = () => {
 
   return (
-    <table>
-      <TableHead/>
-      <TableBody/>
-    </table>
+    <div className={ s.table__wrapper}>
+      <table>
+        <TableHead/>
+        <TableBody/>
+      </table>
+    </div>
   )
 }
 export default Table

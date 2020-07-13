@@ -1,0 +1,8 @@
+$header-color: #282c34;
+$font-color: #fff;
+
+.table__header {
+  cursor: pointer;
+  background: $header-color;
+  color: $font-color;
+}

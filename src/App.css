@@ -1,5 +1,10 @@
+.wrapper {
+  position: relative;
+}
+
 .App {
   text-align: center;
+
 }
 
 .App-logo {

@@ -1,0 +1,39 @@
+.modal__layer {
+  border-radius: 15px;
+}
+
+
+.modal__window {
+  margin: 0 auto;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  background-color: rgb(56, 54, 54);
+  width: 300px;
+  /* width: 400px; */
+  height: 680px;
+  /* height: 350px; */
+  color: #bbb;
+  // position: fixed;
+  z-index: 1000;
+}
+
+.modal__row {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid yellow; */
+  /* align-self: center; */
+}
+
+
+@media(min-width: 768px) {
+  .modal__window {
+    width: 400px;
+    height: 650px;
+  }
+  .hide {
+    display: initial;
+  }
+  .modal__layer {
+    border-radius: 15px;
+  }
+}

@@ -7,7 +7,7 @@ const TableHead = () => {
 
   return (
     <thead>
-      <tr className={s.tableHeader} onClick={ handleHeaderClick }>
+      <tr className={s.table__header} onClick={ handleHeaderClick }>
         <td>№</td>
         <td>Name</td>
         <td>UserName</td>
