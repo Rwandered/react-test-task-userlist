@@ -6,6 +6,9 @@ import logger from 'redux-logger'
 import App from './App';
 import rootReducer from './redux/reducers';
 import { Provider } from "react-redux";
+import 'normalize.css';
+import './index.scss'
+
 
 const store = createStore(
   rootReducer,

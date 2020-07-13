@@ -7,7 +7,7 @@ const Table = () => {
 
   return (
     <div className={ s.table__wrapper}>
-      <table>
+      <table className={ s.table__container}>
         <TableHead/>
         <TableBody/>
       </table>

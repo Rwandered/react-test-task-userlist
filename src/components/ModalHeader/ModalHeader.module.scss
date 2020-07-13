@@ -1,0 +1,16 @@
+$header-color: #282c34;
+$font-color: #fff;
+
+.modal__header {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal__close {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

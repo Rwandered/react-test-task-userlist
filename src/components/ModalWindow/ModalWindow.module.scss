@@ -1,27 +1,31 @@
+$bg-color: #282c34;
+$font-color: #fff;
+
+
 .modal__layer {
-  border-radius: 15px;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 999;
+  background-color: rgba(56, 54, 54, .5);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-
 .modal__window {
-  margin: 0 auto;
+  margin: 50px auto;
   border: 1px solid #bbb;
   border-radius: 10px;
-  background-color: rgb(56, 54, 54);
+  background-color: $bg-color;
+  color: $font-color;
   width: 300px;
-  /* width: 400px; */
-  height: 680px;
-  /* height: 350px; */
-  color: #bbb;
-  // position: fixed;
+  height: 600px;
   z-index: 1000;
 }
 
 .modal__row {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid yellow; */
-  /* align-self: center; */
 }
 
 

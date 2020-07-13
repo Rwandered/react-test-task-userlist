@@ -1,0 +1,29 @@
+.modal__footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-top: 1px solid #eee;
+}
+
+.modal__ok_btn,
+.modal__cancel_btn {
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  margin: 10px 0 10px 0;
+  height: 30px;
+  width: 30px;
+  align-self: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.modal__ok_btn {
+  display: inline-block;
+  background: url('./img/checkmark24.svg') 50% no-repeat;
+}
+
+.modal__cancel_btn {
+  display: inline-block;
+  background: url('./img/cancel-24.svg') 50% no-repeat;
+}

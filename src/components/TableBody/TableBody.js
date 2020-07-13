@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect } from 'react';
 import s from './TableBody.module.scss'
 import {useDispatch, useSelector} from "react-redux";
 import {initUser, showModal} from "../../redux/actionCreators";
@@ -10,7 +10,7 @@ const TableBody = () => {
 
   useEffect( () => {
     dispatch( initUser() )
-  }, [])
+  }, [dispatch])
 
   return (
     <tbody className={ s.table__body }>

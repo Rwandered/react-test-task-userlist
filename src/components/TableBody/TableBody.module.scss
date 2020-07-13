@@ -10,9 +10,18 @@ $hover-font-color: #fff;
 
   .userData {
 
+
     &:hover {
       background: $hover-body-color;
       color: $hover-font-color;
     }
   }
+
+ th, td {
+   padding: 15px 5px;
+   display: table-cell;
+   text-align: left;
+   vertical-align: middle;
+   border-radius: 2px;
+ }
 }

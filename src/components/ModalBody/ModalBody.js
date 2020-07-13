@@ -1,5 +1,4 @@
 import React from 'react';
-import cn from "classnames";
 import  s from './ModalBody.module.scss'
 
 const ModalBody = ( { modalContent } ) => {
@@ -10,12 +9,12 @@ const ModalBody = ( { modalContent } ) => {
         return toJsx( newObj )
       }
       return  (
-        <div key={ index }>
-          <p> { `${ objEntry[0] }: ${ objEntry[1] }` } </p>
+        <div key={ index } className={ s.userInfo }>
+          <p className={ s.info__key }> { objEntry[0].toUpperCase() } </p>
+          <p className={ s.info__value} > {  objEntry[1]  } </p>
         </div>
       )
     })
-
 
   return (
    <div className={ s.modal__body}>

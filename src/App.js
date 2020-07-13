@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
 import Table from "./components/Table/Table";
 import ModalWindow from "./components/ModalWindow/ModalWindow";
 import {useSelector} from "react-redux";
+import s from './App.module.scss'
 
 
 const App =  () => {
@@ -10,7 +10,7 @@ const App =  () => {
 
   console.log('Modal?: ', isModal, userId)
   return (
-    <div className={'wrapper'}>
+    <div className={ s.wrapper }>
       <Table/>
       {
         isModal && <ModalWindow userId={ userId } />
